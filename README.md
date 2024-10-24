@@ -1,6 +1,6 @@
 # Route 53 + S3 + CloudFront Terraform Template
 
-This template creates a S3 bucket, a CloudFront distribution, and Route 53 records for an imported hosted zone to host a static website.
+This template creates a S3 bucket, a CloudFront distribution, and Route 53 records for an an existing hosted zone.
 
 ## Usage
 
@@ -26,3 +26,9 @@ To use this template, follow these steps:
 
 1. To clean up all resources created by this template, run `terraform destroy`.
     * CloudFront distributions take a few minutes to destroy.
+
+## Notes
+
+* This template assumes that you have already created a hosted zone in Route 53.
+* This template also assumes that you have already created an ACM certificate in AWS Certificate Manager for the domain name.
+* This template is <i>not</i> intended to be used as a complete solution for hosting a static website. It is intended to be used as a starting point to learn Terraform and to deploy a simple static website.
